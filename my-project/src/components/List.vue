@@ -1,15 +1,20 @@
 <template>
     <div class="flex justify-center">
         <div class="border p-5 w-3/6">
-                <div class="flex justify-end gap-2">
-                    <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="create">Create</button>
-                </div>
+            <div class="flex justify-center py-3 pb-5">
+                <h1 class="text-xl font-medium">
+                    Gestão de Contactos    
+                </h1>
+            </div>
+            <div class="flex justify-end gap-2">
+                <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="create">Create</button>
+            </div>
             <div class="border my-3 p-4">
-                    <div v-for="(item) in getContacts" class="grid grid-cols-2 m-2">
-                        <div class="flex flex-start m-2">
+                    <div v-for="(item) in getContacts" class="grid grid-cols-2 m-2 border rounded">
+                        <div class="flex flex-start m-2 p-2">
                             <h1>{{item.fullname}}</h1>
                         </div>
-                        <div class="flex justify-end">
+                        <div class="flex justify-end p-2">
                             <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="details(item)">Details</button>
                         </div>
                     </div>
