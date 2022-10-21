@@ -7,7 +7,7 @@
                 </h1>
             </div>
             <div class="flex justify-end gap-2">
-                <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="create">Create</button>
+                <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="create">Criar</button>
             </div>
             <div class="border my-3 p-4">
                     <div v-for="(item) in getContacts" class="grid grid-cols-2 m-2 border rounded">
@@ -15,7 +15,7 @@
                             <h1>{{item.fullName}}</h1>
                         </div>
                         <div class="flex justify-end p-2">
-                            <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="details(item)">Details</button>
+                            <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="details(item)">Detalhes</button>
                         </div>
                     </div>
             </div>

@@ -7,8 +7,8 @@
                     </h1>
                 </div>
             <div class="flex justify-end mt-4 gap-2">
-                <button class="bg-blue-500 hover:bg-blue-700 w-20 h-8 rounded" @click="editContact">Edit</button>
-                <button class="bg-red-500 hover:bg-red-700 w-20 h-8 rounded" @click="deleteContact">Delete</button>
+                <button class="bg-blue-500 hover:bg-blue-700 w-20 h-8 rounded" @click="editContact">Editar</button>
+                <button class="bg-red-500 hover:bg-red-700 w-20 h-8 rounded" @click="deleteContact">Apagar</button>
             </div>
             <form >
                 <div class="border my-3 p-4">
