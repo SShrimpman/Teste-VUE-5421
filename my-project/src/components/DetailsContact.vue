@@ -12,10 +12,10 @@
             </div>
             <form >
                 <div class="border my-3 p-4">
-                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.fullName">
-                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.cellphone">
-                    <input class="flex justify-start p-1 mb-3" type="email" v-model="$route.params.email">
-                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.address">
+                    <h1 class="flex justify-start p-1 mb-3">{{$route.params.fullName}}</h1>
+                    <h1 class="flex justify-start p-1 mb-3">{{$route.params.cellphone}}</h1>
+                    <h1 class="flex justify-start p-1 mb-3">{{$route.params.email}}</h1>
+                    <h1 class="flex justify-start p-1 mb-3">{{$route.params.address}}</h1>
                 </div>
             </form>
         </div>
@@ -41,8 +41,7 @@ export default {
                 email : this.$route.params.email,
                 address : this.$route.params.address
             }
-            this.contactStoreT.update(this.updateContact)
-            this.$router.push({ name: "List" });
+            this.$router.push({ name: "Edit", params:{ id: this.updateContact.id, fullName: this.updateContact.fullName, cellphone: this.updateContact.cellphone, email: this.updateContact.email, address: this.updateContact.address }});
         },
         deleteContact() {
             this.contactStoreT.delete(this.$route.params.id)
