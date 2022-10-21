@@ -12,7 +12,7 @@
             <div class="border my-3 p-4">
                     <div v-for="(item) in getContacts" class="grid grid-cols-2 m-2 border rounded">
                         <div class="flex flex-start m-2 p-2">
-                            <h1>{{item.fullname}}</h1>
+                            <h1>{{item.fullName}}</h1>
                         </div>
                         <div class="flex justify-end p-2">
                             <button class="border bg-blue-500 hover:bg-blue-700 w-24 p-1 rounded" @click="details(item)">Details</button>

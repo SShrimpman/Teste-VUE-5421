@@ -7,7 +7,7 @@ import List from '../components/List.vue'
 const routes = [
     { path: '/', name: 'List', component: List },
     { path: '/create', name: 'Create', component: CreateContact },
-    { path:'/details/:id/:description/:status/:data', name: 'Details', component: DetailsContact },
+    { path:'/details/:id/:fullName/:cellphone/:email/:address', name: 'Details', component: DetailsContact },
 ]
 
 const router = createRouter({

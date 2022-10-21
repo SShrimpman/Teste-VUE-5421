@@ -1,15 +1,53 @@
 <template>
-    <div>
-        detalhes
+    <div class="flex justify-center">
+        <div class="border p-5 w-3/6">
+            <div class="flex justify-center py-3 pb-5">
+                    <h1 class="text-xl font-medium">
+                        Gestão de Contactos    
+                    </h1>
+                </div>
+            <div class="flex justify-end mt-4 gap-2">
+                <button class="bg-blue-500 hover:bg-blue-700 w-20 h-8 rounded" @click="editContact">Edit</button>
+                <button class="bg-red-500 hover:bg-red-700 w-20 h-8 rounded" @click="deleteContact">Delete</button>
+            </div>
+            <form >
+                <div class="border my-3 p-4">
+                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.fullName">
+                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.cellphone">
+                    <input class="flex justify-start p-1 mb-3" type="email" v-model="$route.params.email">
+                    <input class="flex justify-start p-1 mb-3" type="text" v-model="$route.params.address">
+                </div>
+            </form>
+        </div>
     </div>
 </template>
 
 <script>
-    export default {
-        
-    }
+import { contactStore } from '../store/contactStore';
+export default {
+    setup(){
+        const contactStoreT = contactStore()
+        return { contactStoreT }
+    },
+    data(){
+        updateContact : {}
+    },
+    methods: {
+        editContact(){
+            this.updateContact = {
+                id : this.$route.params.id,
+                fullName : this.$route.params.fullName,
+                cellphone : this.$route.params.cellphone,
+                email : this.$route.params.email,
+                address : this.$route.params.address
+            }
+            this.contactStoreT.update(this.updateContact)
+            this.$router.push({ name: "List" });
+        },
+        deleteContact() {
+            this.contactStoreT.delete(this.$route.params.id)
+            this.$router.push({ name: "List" });
+        }
+    },
+}
 </script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -10,7 +10,7 @@
                 <div class="flex justify-center h-48">
                     <div class="grid grid-cols-2 border p-2 w-5/6">
                         <div class="grid content-start">
-                            <input class="h-7 p-1 m-2" type="text" placeholder="Nome" v-model="addContact.fullname">
+                            <input class="h-7 p-1 m-2" type="text" placeholder="Nome" v-model="addContact.fullName">
                             <input class="h-7 p-1 m-2" type="text" placeholder="Número de Telemóvel" v-model="addContact.cellphone">
                             <input class="h-7 p-1 m-2" type="email" placeholder="Email" v-model="addContact.email">
                             <input class="h-7 p-1 m-2" type="text" placeholder="Morada" v-model="addContact.address">
